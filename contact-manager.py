@@ -10,7 +10,11 @@ def view_contact():
         print("no contacts yet.")
     else:
         for c in contacts:
-            print(f"name:{c['name']},phone:{c['phone']},email:{c['email']},")
+            print("\n-------------------")
+            print("👤 Name :", c['name'])
+            print("📞 Phone:", c['phone'])
+            print("📧 Email:", c['email'])
+            print("-------------------")
 
 
 def search_contact():
@@ -18,18 +22,26 @@ def search_contact():
     found=False
     for c in contacts :
         if query.lower() in c["name"].lower() or query in c["phone"]:
-            print(f"name:{c['name']},phone:{c['phone']},email:{c['email']}")
-            found=True
+           print("\n-------------------")
+           print("👤 Name :", c['name'])
+           print("📞 Phone:", c['phone'])
+           print("📧 Email:", c['email'])
+           print("-------------------")
+        found=True
     if not found :
         print("❌ Contact not found.")
 
 def main ():
     while True :
-        print("\n=====CONTACT-APP=====")
-        print("\n1.Add Contact")
-        print("\n2.View Contact")
-        print("\n3.Search Contact")
-        print("\n4.Exit")
+        print("\n📇 CONTACT MANAGER")
+        print("-"*25)
+
+        print("1️⃣ Add Contact")
+        print("2️⃣ View Contacts")
+        print("3️⃣ Search Contact")
+        print("4️⃣ Exit")
+
+        print("-"*25)
 
         choice=input("Enter Choice :")
 
