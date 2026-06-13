@@ -1,9 +1,28 @@
 contacts=[]
+def load_contacts():
+
+    file = open("contacts.txt", "r")
+
+    for line in file:
+
+        name, phone, email = line.strip().split(",")
+
+        contacts.append({
+            "name": name,
+            "phone": phone,
+            "email": email
+        })
+
+    file.close()
 def add_contact() :
     name=input("Enter name :")
     phone=input("Enter phone :")
     email=input("Enter email :")
     contacts.append({"name":name,"phone":phone,"email":email})
+
+    file = open("contacts.txt", "a")
+    file.write(name + "," + phone + "," + email + "\n")
+    file.close()
 
 def view_contact():
     if not contacts:
@@ -57,4 +76,5 @@ def main ():
         else:
             print("Invalide Choice . Try Again ")
 
+load_contacts()
 main()
