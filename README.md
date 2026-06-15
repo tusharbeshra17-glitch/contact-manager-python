@@ -26,7 +26,7 @@ python contact_manager.py
 
 ## 📸 Screenshot
 
-Add a screenshot of the program here.
+screenshot1.png
 
 ## 🔮 Future Improvements
 
