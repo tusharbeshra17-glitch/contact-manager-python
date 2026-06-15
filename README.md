@@ -29,9 +29,4 @@ python contact_manager.py
 
 ![Snake Water Gun Game](screenshot1.png)
 
-## 🔮 Future Improvements
 
-* 💾 Save contacts to a file
-* ✏️ Update contact details
-* 🗑️ Delete contacts
-* 🎨 GUI version
