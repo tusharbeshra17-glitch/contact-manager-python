@@ -26,7 +26,8 @@ python contact_manager.py
 
 ## 📸 Screenshot
 
-screenshot1.png
+
+![Snake Water Gun Game](screenshot1.png)
 
 ## 🔮 Future Improvements
 
