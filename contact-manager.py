@@ -1,4 +1,40 @@
 contacts=[]
+history = []
+def  update_contact():
+    update_name=input("enter name to update :")
+    new_name=input("enter new name  :")
+    for c in contacts :
+         if c["name"] == update_name:
+             c["name"] = new_name
+             file=open("contacts.txt","w")
+             for c in contacts :
+                  file.write(c["name"] + "," + c["phone"] + "," + c["email"] + "\n")
+             file.close()
+             print("update sucessfully!!")
+             return 
+    print("name not found")
+
+def delet_contact():
+    del_name=input("enter name to delet :")
+    for c in contacts :
+        if c["name"] == del_name:
+            contacts.remove(c)
+            file=open("contacts.txt","w")
+            for c in contacts :
+                file.write(c["name"] + "," + c["phone"] + "," + c["email"] + "\n")
+            file.close()
+            print("Deleted sucessfully!!")
+            return 
+    print("contact not found ")
+
+def view_history():
+    if  not  history :
+        print("no history available!")
+    else:
+        print("\n History")
+        for h in history :
+            print(h)
+
 def load_contacts():
 
     file = open("contacts.txt", "r")
@@ -19,6 +55,7 @@ def add_contact() :
     phone=input("Enter phone :")
     email=input("Enter email :")
     contacts.append({"name":name,"phone":phone,"email":email})
+    history.append("Added: " + name)
 
     file = open("contacts.txt", "a")
     file.write(name + "," + phone + "," + email + "\n")
@@ -58,7 +95,10 @@ def main ():
         print("1️⃣ Add Contact")
         print("2️⃣ View Contacts")
         print("3️⃣ Search Contact")
-        print("4️⃣ Exit")
+        print("4️⃣ Update Contact")
+        print("5️⃣ Delete Contact")
+        print("6️⃣ View History")
+        print("7️⃣ Exit")
 
         print("-"*25)
 
@@ -71,7 +111,13 @@ def main ():
         elif choice == "3":
             search_contact()
         elif choice == "4":
-            print("👋 Goodbye!")
+            update_contact()
+        elif choice == "5":
+            delet_contact()
+        elif choice == "6":
+            view_history()
+        elif choice =="7":
+            print("👋 Goodbye!")    
             break
         else:
             print("Invalide Choice . Try Again ")
