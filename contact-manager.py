@@ -46,7 +46,7 @@ def search_contact():
            print("📞 Phone:", c['phone'])
            print("📧 Email:", c['email'])
            print("-------------------")
-        found=True
+           found=True
     if not found :
         print("❌ Contact not found.")
 
