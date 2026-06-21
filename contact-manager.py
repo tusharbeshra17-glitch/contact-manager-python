@@ -89,7 +89,15 @@ def search_contact():
 
 def main ():
     while True :
-        print("\n📇 CONTACT MANAGER")
+        print(r"""
+   ____            _             _
+  / ___|___  _ __ | |_ __ _  ___| |_
+ | |   / _ \| '_ \| __/ _` |/ __| __|
+ | |__| (_) | | | | || (_| | (__| |_
+  \____\___/|_| |_|\__\__,_|\___|\__|
+
+        📒 CONTACT MANAGEMENT SYSTEM
+""")
         print("-"*25)
 
         print("1️⃣ Add Contact")
